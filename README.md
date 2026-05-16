@@ -1,1 +1,1 @@
-# Stranger-Game-POO
+# STRANGER GAME - Propostas
