@@ -329,7 +329,7 @@ Introduzida como uma nova aliada com habilidades de mobilidade urbana.
 
 *NÍVEL 3*
 
-    Personagens Introduzidos:
+*Personagens Introduzidos:*
 
 
 ​**Steve Harrington**
@@ -353,7 +353,7 @@ Funcionário da sorveteria Scoops Ahoy, utiliza sua experiência em combate para
 - ​Habilidade: Utiliza sua câmera fotográfica. O flash da câmera atordoa todos os inimigos visíveis na tela simultaneamente, criando aberturas para o ataque do restante do grupo.
 
 
-      Evolução de Personagens Veteranos:
+*Evolução de Personagens Veteranos:*
 
 **​Dustin Henderson**
 
@@ -392,7 +392,7 @@ Funcionário da sorveteria Scoops Ahoy, utiliza sua experiência em combate para
 
 *NÍVEL 4*
 
-    Personagens Introduzidos:
+*Personagens Introduzidos:*
 
 **Eddie Munson**
 
@@ -401,7 +401,7 @@ Funcionário da sorveteria Scoops Ahoy, utiliza sua experiência em combate para
 - ​Habilidade: Solo de Guitarra (Acorde de Atração). Eddie utiliza a sua guitarra para emitir ondas sonoras que atraem e atordoam grupos de Demobats (morcegos do Mundo Invertido). No jogo, esta habilidade funciona como um controle de multidão, permitindo que o restante do grupo ataque enquanto os inimigos estão distraídos pelo som.
 
 
-      Evolução de Personagens Veteranos:
+*Evolução de Personagens Veteranos:*
 
 **Nancy Wheeler**
 
@@ -444,3 +444,55 @@ A iluminação dinâmica é o principal elemento de modernização estética. O 
 
 A paleta de cores é utilizada de forma estratégica para diferenciar os níveis e os estados emocionais da narrativa. Para a Hawkins cotidiana, utiliza-se uma paleta vibrante e saturada, inspirada na cinematografia dos anos 1980, com forte presença de tons quentes e contrastes de neon. À medida que o jogador progride para os níveis finais ou entra em dimensões alternativas, a paleta sofre um deslocamento cromático para tons frios, desaturados e viscerais, com predominância de azul escuro, cinza e vermelho escarlate. Além das cores, o uso de sistemas de partículas para simular poeira, fumaça e as cinzas flutuantes do Mundo Invertido complementa a direção de arte, conferindo ao jogo uma aparência moderna e tecnicamente refinada dentro do estilo pixelado.
 
+
+## 3. Viabilidade Estratégica e Critérios de Entrega
+
+
+### 3.1. Requisitos de Implementação e Tecnologia
+
+​O desenvolvimento deste projeto utiliza a linguagem de programação Python em conjunto com a biblioteca PyGame como base tecnológica principal. A escolha desta ferramenta justifica-se pela sua eficiência na manipulação de sprites 2D e pela flexibilidade no gerenciamento de eventos, características essenciais para um jogo que busca unificar cinco temporadas em um único sistema. No entanto, a implementação de uma obra com esta escala apresenta desafios técnicos específicos que exigem soluções estruturadas de engenharia de software.
+
+​O primeiro desafio reside no Gerenciamento de Estados de Jogo. Devido à extensão da narrativa, o sistema deve ser capaz de transitar de forma estável entre diferentes menus, cutscenes e, principalmente, entre os cinco níveis (temporadas). A implementação de uma Máquina de Estados é necessária para controlar quais recursos de áudio, mapas e personagens devem estar ativos em cada momento, garantindo que a transição entre a Hawkins normal e o Mundo Invertido ocorra sem falhas de carregamento ou conflitos de lógica no loop principal.
+
+​O Sistema de Colisões e Física representa outro ponto crítico. Para um RPG de ação, a precisão nas interações entre o jogador, o cenário e os projéteis é fundamental. O desafio consiste em otimizar a detecção de colisão para que o desempenho não seja prejudicado pela quantidade de objetos na tela, especialmente em batalhas contra grandes hordas de inimigos nas temporadas finais. É necessário implementar algoritmos que verifiquem colisões apenas em entidades próximas ao jogador, garantindo a fluidez dos movimentos e a integridade das barreiras físicas do cenário.
+
+​A Inteligência Artificial dos Inimigos deve ser desenvolvida para oferecer comportamentos distintos que reflitam as criaturas da série. Enquanto inimigos básicos, como os Ratos da terceira temporada, podem seguir lógicas simples de perseguição, chefes como o Demogorgon ou Vecna exigem padrões de ataque mais complexos e estados de comportamento variados (patrulha, busca, ataque em área e recuo). A implementação de algoritmos de busca de caminho é essencial para que os oponentes naveguem de forma inteligente pelo cenário, desviando de obstáculos e cercando o grupo de protagonistas de maneira estratégica.
+
+
+### 3.2. Metas de Produção (Milestones)
+
+​O cronograma de desenvolvimento deste projeto é estruturado em marcos evolutivos que garantem a entrega de módulos funcionais antes da expansão para as fases mais complexas da narrativa. O objetivo é estabelecer uma base sólida de jogabilidade para que os níveis posteriores possam herdar e aprimorar as mecânicas já testadas.
+
+**​Milestone 1**: *Estrutura Base e Protótipo do Nível 1*
+
+A primeira fase foca na configuração do ambiente de desenvolvimento em PyGame e na criação do protótipo funcional do primeiro nível. Esta entrega contempla a movimentação básica dos personagens, a implementação do sistema de diálogo e a construção do mapa inicial de Hawkins. O foco principal é a transição entre o mundo normal e as masmorras do Laboratório, culminando na conclusão do arco da primeira temporada e na validação da mecânica de exploração.
+
+**​Milestone 2:** *Sistemas de Combate e Implementação dos Níveis 2 e 3*
+
+O segundo marco consiste na consolidação das mecânicas de conflito e interação. Nesta fase, são implementados o sistema de colisão com inimigos, o gerenciamento de pontos de vida e a troca dinâmica de personagens. Além da parte técnica, esta etapa entrega o conteúdo referente às temporadas 2 e 3, incluindo o sistema de habilidades de suporte (como a cura de Max e o uso de iscas por Dustin) e a construção de ambientes complexos como o Shopping Starcourt.
+
+**​Milestone 3**: *Complexidade Narrativa e Expansão para o Nível 4*
+
+A terceira fase lida com o desafio de gerenciar núcleos de personagens geograficamente separados. O objetivo desta entrega é implementar as mecânicas específicas da quarta temporada, como o sistema rítmico da guitarra de Eddie e o combate térmico de Murray. O foco técnico reside na otimização da troca de estados de jogo entre diferentes localidades (Hawkins, Rússia e Califórnia) e na implementação de enigmas lógicos mais sofisticados para a Mansão Creel.
+
+**​Milestone 4**: *Implementação do Nível 5 e Batalha Final*
+
+O quarto marco foca na entrega do conteúdo apocalíptico da quinta temporada. Esta fase exige a implementação de sistemas de partículas avançados para representar a invasão do Mundo Invertido e a degradação do cenário. O objetivo principal é a construção dos capítulos finais, que incluem batalhas de chefes em múltiplas fases e a integração das habilidades evoluídas de todo o grupo de protagonistas para o encerramento do jogo.
+
+​**Milestone 5:** *Refinamento, Interface e Otimização 
+Final*
+
+A etapa final é dedicada ao polimento estético e técnico da obra completa. Esta entrega contempla a revisão de todos os assets de áudio e imagem para garantir a unidade visual do "Pixel Art Atualizado", o desenvolvimento final da interface de usuário e a correção de bugs de colisão ou lógica. O marco encerra-se com a otimização de performance do código para garantir que a unificação das cinco temporadas funcione de maneira estável e fluida.
+
+
+### 3.3. Definição de Conclusão
+
+​A Definição de Conclusão deste projeto estabelece os parâmetros técnicos, narrativos e funcionais que determinam a finalização do produto para sua entrega oficial. Um estado de "conclusão" é atingido quando o jogo deixa de ser um conjunto de módulos isolados e passa a operar como uma experiência unificada e estável, cumprindo todas as promessas de escopo estabelecidas nos tópicos anteriores. Os critérios de qualidade para a versão final são divididos em quatro pilares fundamentais.
+
+​O primeiro critério é a Integridade de Conteúdo e Progressão. O jogo é considerado finalizado apenas quando todos os cinco níveis, correspondentes às cinco temporadas da série, estão plenamente implementados e acessíveis. Isso inclui a execução funcional de todos os capítulos (seis capítulos para os níveis 1 e 2, e oito capítulos para os níveis 3, 4 e 5), permitindo que o usuário jogue do início ao encerramento da quinta temporada sem interrupções lógicas ou ausência de partes da trama. A conclusão exige que todos os personagens controláveis planejados estejam desbloqueáveis e com suas respectivas habilidades operantes.
+
+​O segundo pilar refere-se à Estabilidade Técnica e Performance. A versão final deve apresentar um funcionamento fluido na biblioteca PyGame, mantendo uma taxa de quadros estável e sem variações que prejudiquem a jogabilidade. É indispensável que o sistema de gerenciamento de estados esteja livre de erros, permitindo salvar e carregar o progresso sem perda de dados. Além disso, o sistema de colisões deve estar refinado, eliminando falhas de sobreposição de objetos ou travamentos do personagem no cenário, e a Inteligência Artificial dos inimigos deve responder corretamente aos gatilhos de combate e busca de caminho definidos.
+
+​O terceiro critério estabelece a Fidelidade Visual e Sonora. A qualidade estética deve apresentar uma unidade absoluta sob o padrão de "Pixel Art Atualizado", garantindo que não existam discrepâncias gráficas entre os ativos reaproveitados de títulos anteriores e os novos cenários criados para as temporadas finais. A conclusão também exige a implementação completa da sonoplastia, incluindo efeitos sonoros de ataques, interações com objetos e uma trilha sonora que se ajuste dinamicamente ao clima de cada nível e às transições para o Mundo Invertido.
+
+​Por fim, o critério de Usabilidade e Interface de Usuário (UI) determina que todos os menus, sistemas de inventário, barras de vida e indicadores de habilidades estejam completamente funcionais e intuitivos. O jogo é considerado finalizado quando um usuário externo consegue compreender os comandos e os objetivos sem auxílio externo, navegando pela interface de forma autônoma. O cumprimento integral desses critérios assegura que a entrega final não seja apenas um protótipo, mas um produto de software de entretenimento robusto e fiel à obra em que se baseia.
